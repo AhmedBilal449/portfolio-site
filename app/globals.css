@@ -1,6 +1,7 @@
 :root {
   /* Light mode colors */
   --background: #ffffff;
+  --background-secondary: #f8f9fa;
   --foreground: #1a1a1a;
   --card-bg: #f8f9fa;
   --border: #e5e7eb;
@@ -12,6 +13,7 @@
 [data-theme='dark'] {
   /* Dark mode colors */
   --background: #0a0a0a;
+  --background-secondary: #151515;
   --foreground: #e5e7eb;
   --card-bg: #1a1a1a;
   --border: #2a2a2a;

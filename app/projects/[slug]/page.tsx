@@ -1,5 +1,8 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { getProjectBySlug, getAllProjectSlugs } from '@/app/data/projects';
 import styles from './project.module.css';
 
@@ -15,6 +18,28 @@ export function generateStaticParams() {
   }));
 }
 
+// Generate metadata for each project page
+export async function generateMetadata({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+    };
+  }
+
+  return {
+    title: `${project.title} | Portfolio`,
+    description: project.shortDescription,
+    openGraph: {
+      title: `${project.title} | Portfolio`,
+      description: project.shortDescription,
+      type: 'website',
+    },
+  };
+}
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
@@ -24,99 +49,174 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className={styles.projectPage}>
+    <motion.div 
+      className={styles.projectPage}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className={styles.container}>
         {/* Back Button */}
-        <Link href="/#projects" className={styles.backButton}>
-          ← Back to Projects
-        </Link>
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <Link href="/#projects" className={styles.backButton}>
+            ← Back to Projects
+          </Link>
+        </motion.div>
 
         {/* Project Header */}
-        <header className={styles.header}>
+        <motion.header 
+          className={styles.header}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h1 className={styles.title}>{project.title}</h1>
           <p className={styles.shortDescription}>{project.shortDescription}</p>
           
           {/* Tech Stack */}
           <div className={styles.techStack}>
-            {project.techStack.map((tech) => (
-              <span key={tech} className={styles.techBadge}>
+            {project.techStack.map((tech, index) => (
+              <motion.span 
+                key={tech} 
+                className={styles.techBadge}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.05 }}
+              >
                 {tech}
-              </span>
+              </motion.span>
             ))}
           </div>
 
           {/* Links */}
-          <div className={styles.links}>
+          <motion.div 
+            className={styles.links}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             {project.liveUrl && (
-              <a 
+              <motion.a 
                 href={project.liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.linkButton}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 View Live Demo →
-              </a>
+              </motion.a>
             )}
             {project.githubUrl && (
-              <a 
+              <motion.a 
                 href={project.githubUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.linkButton}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 View on GitHub →
-              </a>
+              </motion.a>
             )}
-          </div>
-        </header>
+          </motion.div>
+        </motion.header>
 
         {/* Main Image */}
-        <div className={styles.mainImage}>
+        <motion.div 
+          className={styles.mainImage}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
           <div className={styles.imagePlaceholder}>
             {project.title}
           </div>
-        </div>
+        </motion.div>
 
         {/* Problem Statement */}
-        <section className={styles.section}>
+        <motion.section 
+          className={styles.section}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className={styles.sectionTitle}>The Problem</h2>
           <p className={styles.text}>{project.problem}</p>
-        </section>
+        </motion.section>
 
         {/* Solution */}
-        <section className={styles.section}>
+        <motion.section 
+          className={styles.section}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className={styles.sectionTitle}>The Solution</h2>
           <p className={styles.text}>{project.solution}</p>
-        </section>
+        </motion.section>
 
         {/* Key Features */}
-        <section className={styles.section}>
+        <motion.section 
+          className={styles.section}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className={styles.sectionTitle}>Key Features</h2>
           <ul className={styles.featureList}>
             {project.keyFeatures.map((feature, index) => (
-              <li key={index} className={styles.featureItem}>
+              <motion.li 
+                key={index} 
+                className={styles.featureItem}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 {feature}
-              </li>
+              </motion.li>
             ))}
           </ul>
-        </section>
+        </motion.section>
 
         {/* Screenshots */}
         {project.screenshots.length > 0 && (
-          <section className={styles.section}>
+          <motion.section 
+            className={styles.section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className={styles.sectionTitle}>Screenshots</h2>
             <div className={styles.screenshotsGrid}>
               {project.screenshots.map((screenshot, index) => (
-                <div key={index} className={styles.screenshot}>
+                <motion.div 
+                  key={index} 
+                  className={styles.screenshot}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ scale: 1.03 }}
+                >
                   <div className={styles.imagePlaceholder}>
                     Screenshot {index + 1}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </section>
+          </motion.section>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

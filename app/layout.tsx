@@ -1,10 +1,35 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from './components/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'Portfolio | Software Engineer',
-  description: 'Professional portfolio of a full-stack and data-focused software engineer',
+  description: 'Professional portfolio of a full-stack and data-focused software engineer specializing in modern web technologies and data-driven solutions',
+  keywords: ['software engineer', 'full-stack developer', 'web development', 'React', 'Next.js', 'TypeScript', 'portfolio'],
+  authors: [{ name: 'Your Name' }],
+  creator: 'Your Name',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Portfolio | Software Engineer',
+    description: 'Professional portfolio showcasing full-stack development projects and technical expertise',
+    siteName: 'Portfolio',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio | Software Engineer',
+    description: 'Professional portfolio showcasing full-stack development projects and technical expertise',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

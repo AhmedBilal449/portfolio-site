@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import styles from './Navbar.module.css';
 import dynamic from 'next/dynamic';
 
@@ -28,7 +29,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
+    <motion.nav 
+      className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
       <div className={styles.navContainer}>
         <button 
           onClick={() => scrollToSection('home')}
@@ -39,19 +45,49 @@ export default function Navbar() {
         
         <ul className={styles.navLinks}>
           <li>
-            <button onClick={() => scrollToSection('home')}>Home</button>
+            <motion.button 
+              onClick={() => scrollToSection('home')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Home
+            </motion.button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('about')}>About</button>
+            <motion.button 
+              onClick={() => scrollToSection('about')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              About
+            </motion.button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('skills')}>Skills</button>
+            <motion.button 
+              onClick={() => scrollToSection('skills')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Skills
+            </motion.button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('projects')}>Projects</button>
+            <motion.button 
+              onClick={() => scrollToSection('projects')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Projects
+            </motion.button>
           </li>
           <li>
-            <button onClick={() => scrollToSection('contact')}>Contact</button>
+            <motion.button 
+              onClick={() => scrollToSection('contact')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Contact
+            </motion.button>
           </li>
         </ul>
 
@@ -59,6 +95,6 @@ export default function Navbar() {
           <ThemeToggle />
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

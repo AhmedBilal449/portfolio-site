@@ -20,7 +20,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          Your Name
+          Ahmed Bilal
         </motion.h1>
         <motion.h2 
           className={styles.title}
@@ -36,7 +36,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
-          Building scalable systems and solving complex problems with clean, maintainable code.
+          Coding for Fun and Profit
         </motion.p>
         
         <motion.div 

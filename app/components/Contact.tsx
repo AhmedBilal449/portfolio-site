@@ -69,7 +69,7 @@ export default function Contact() {
             Email
           </motion.a>
           <motion.a 
-            href="https://linkedin.com/in/yourprofile" 
+            href="https://www.linkedin.com/in/ahmedbilalgujjar/" 
             className={styles.contactLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export default function Contact() {
             LinkedIn
           </motion.a>
           <motion.a 
-            href="https://github.com/yourprofile" 
+            href="https://github.com/AhmedBilal449" 
             className={styles.contactLink}
             target="_blank"
             rel="noopener noreferrer"

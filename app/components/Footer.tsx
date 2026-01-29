@@ -17,7 +17,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Ahmed Bilal. All rights reserved. Enforced by *Clawed*.
           </motion.p>
           
           <motion.div 
@@ -39,7 +39,7 @@ export default function Footer() {
               <span className={styles.linkIcon}>📧</span>
             </motion.a>
             <motion.a 
-              href="https://linkedin.com/in/yourprofile" 
+              href="https://www.linkedin.com/in/ahmedbilalgujjar/" 
               className={styles.socialLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export default function Footer() {
               <span className={styles.linkIcon}>💼</span>
             </motion.a>
             <motion.a 
-              href="https://github.com/yourprofile" 
+              href="https://github.com/AhmedBilal449" 
               className={styles.socialLink}
               target="_blank"
               rel="noopener noreferrer"

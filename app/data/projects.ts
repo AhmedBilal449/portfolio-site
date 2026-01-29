@@ -20,7 +20,7 @@ export const projects: ProjectData[] = [
     title: 'Dental Cavity Detection',
     shortDescription: 'Machine learning model for automated dental cavity detection using image analysis.',
     image: '/projects/dental.jpg',
-    techStack: ['Python', 'TensorFlow', 'OpenCV', 'Flask', 'NumPy'],
+    techStack: ['Python', 'Ultralytics (YOLO)','Gradio', 'OpenCV','NumPy','Pandas'],
     problem: 'Dental cavity detection often relies on manual inspection, which can be time-consuming and subject to human error. Early detection is critical for preventing more serious dental issues, but traditional methods may miss subtle cavities.',
     solution: 'Built a machine learning-powered system that analyzes dental X-ray images to automatically identify and flag potential cavities. The model uses convolutional neural networks trained on thousands of annotated dental images to achieve high accuracy detection rates.',
     keyFeatures: [

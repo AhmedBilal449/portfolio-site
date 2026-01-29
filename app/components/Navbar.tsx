@@ -73,6 +73,15 @@ export default function Navbar() {
           </li>
           <li>
             <motion.button 
+              onClick={() => scrollToSection('experience')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Experience
+            </motion.button>
+          </li>
+          <li>
+            <motion.button 
               onClick={() => scrollToSection('projects')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

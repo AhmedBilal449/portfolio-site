@@ -57,7 +57,7 @@ export default function Contact() {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.a 
-            href="mailto:your.email@example.com" 
+            href="mailto:ahmed.bilal.work@gmail.com" 
             className={styles.contactLink}
             target="_blank"
             rel="noopener noreferrer"

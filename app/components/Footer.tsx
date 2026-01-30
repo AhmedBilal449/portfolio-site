@@ -28,7 +28,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <motion.a 
-              href="mailto:your.email@example.com" 
+              href="mailto:ahmed.bilal.work@gmail.com" 
               className={styles.socialLink}
               target="_blank"
               rel="noopener noreferrer"

@@ -17,7 +17,7 @@ export const projects: ProjectData[] = [
   {
     id: '1',
     slug: 'dental-cavity-detection',
-    title: 'Dental Cavity Detection',
+    title: 'Dental Genie',
     shortDescription: 'Machine learning model for automated dental cavity detection using image analysis.',
     image: '/projects/dental.jpg',
     techStack: ['Python', 'Ultralytics (YOLO)','Gradio', 'OpenCV','NumPy','Pandas'],
@@ -31,7 +31,7 @@ export const projects: ProjectData[] = [
       'Batch processing support for multiple images'
     ],
     screenshots: ['/projects/dental.jpg', '/projects/dental-2.jpg'],
-    githubUrl: 'https://github.com/yourusername/dental-cavity-detection'
+    githubUrl: 'https://github.com/AhmedBilal449/dental-genie'
   },
   {
     id: '2',

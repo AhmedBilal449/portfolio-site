@@ -69,6 +69,121 @@ export default function Experience() {
 
   return (
     <section id="experience" className={styles.experience} ref={ref}>
+      {/* Animated Background Elements */}
+      <div className={styles.backgroundAnimation}>
+        {/* Floating Gradient Orbs */}
+        <motion.div
+          className={styles.gradientOrb1}
+          animate={{
+            x: [0, 30, 0],
+            y: [0, -40, 0],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className={styles.gradientOrb2}
+          animate={{
+            x: [0, -40, 0],
+            y: [0, 30, 0],
+            scale: [1, 1.3, 1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className={styles.gradientOrb3}
+          animate={{
+            x: [0, 20, 0],
+            y: [0, -30, 0],
+            scale: [1, 1.15, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        
+        {/* Floating Geometric Shapes */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className={styles.floatingShape}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              rotate: [0, 360],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 5 + i * 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.5,
+            }}
+          />
+        ))}
+
+        {/* Animated Lines */}
+        <svg className={styles.animatedLines} viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+          <motion.path
+            d="M0,500 Q250,400 500,500 T1000,500"
+            stroke="url(#gradient1)"
+            strokeWidth="2"
+            fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={isInView ? { pathLength: 1, opacity: 0.3 } : { pathLength: 0, opacity: 0 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+          />
+          <motion.path
+            d="M0,300 Q250,200 500,300 T1000,300"
+            stroke="url(#gradient2)"
+            strokeWidth="2"
+            fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={isInView ? { pathLength: 1, opacity: 0.2 } : { pathLength: 0, opacity: 0 }}
+            transition={{ duration: 2.5, ease: "easeInOut", delay: 0.3 }}
+          />
+          <motion.path
+            d="M0,700 Q250,600 500,700 T1000,700"
+            stroke="url(#gradient3)"
+            strokeWidth="2"
+            fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={isInView ? { pathLength: 1, opacity: 0.25 } : { pathLength: 0, opacity: 0 }}
+            transition={{ duration: 2.2, ease: "easeInOut", delay: 0.5 }}
+          />
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="var(--primary)" stopOpacity="0" />
+              <stop offset="50%" stopColor="var(--primary)" stopOpacity="1" />
+              <stop offset="100%" stopColor="var(--secondary)" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="var(--secondary)" stopOpacity="0" />
+              <stop offset="50%" stopColor="var(--secondary)" stopOpacity="1" />
+              <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="var(--primary)" stopOpacity="0" />
+              <stop offset="50%" stopColor="var(--primary)" stopOpacity="1" />
+              <stop offset="100%" stopColor="var(--secondary)" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
       <div className={styles.container}>
         <motion.h2 
           className={styles.sectionTitle}

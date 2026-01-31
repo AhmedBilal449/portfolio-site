@@ -1,8 +1,16 @@
 .footer {
-  background: var(--background);
-  border-top: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: 3rem 2rem;
   margin-top: 4rem;
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+[data-theme='light'] .footer {
+  background: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .container {
@@ -36,18 +44,25 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--card-background);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   text-decoration: none;
-  color: var(--text);
+  color: var(--foreground);
+}
+
+[data-theme='light'] .socialLink {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .socialLink:hover {
-  transform: translateY(-3px);
+  transform: translateY(-3px) scale(1.1);
   border-color: var(--primary);
   background: var(--primary);
   color: white;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
 }
 
 .linkIcon {

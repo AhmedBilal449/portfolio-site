@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { ThemeProvider } from './components/ThemeProvider';
+import AnimatedBackground from './components/AnimatedBackground';
 
 export const metadata: Metadata = {
   title: 'Portfolio | Software Engineer',
@@ -53,6 +54,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <AnimatedBackground />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

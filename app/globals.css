@@ -40,7 +40,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
   color: var(--foreground);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.6s ease, color 0.3s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* Typography */
@@ -86,6 +93,8 @@ a {
 /* Spacing system */
 .section {
   padding: 6rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsive typography */

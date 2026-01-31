@@ -54,7 +54,7 @@ export default function Hero() {
             View Projects
           </motion.button>
           <motion.a 
-            href="/resume.pdf" 
+            href="https://drive.google.com/file/d/19aEkDRRUZrfROpkblKo1yrakD_m-0q3q/view?usp=drive_link" 
             download
             className={`${styles.btn} ${styles.btnSecondary}`}
             whileHover={{ scale: 1.05 }}

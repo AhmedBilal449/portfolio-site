@@ -93,7 +93,7 @@ export default function Contact() {
             GitHub
           </motion.a>
           <motion.a 
-            href="https://twitter.com/yourprofile" 
+            href="https://x.com/LSnipet" 
             className={styles.contactLink}
             target="_blank"
             rel="noopener noreferrer"

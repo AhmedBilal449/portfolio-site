@@ -61,7 +61,7 @@ export default function Footer() {
               <span className={styles.linkIcon}>💻</span>
             </motion.a>
             <motion.a 
-              href="https://twitter.com/yourprofile" 
+              href="https://x.com/LSnipet" 
               className={styles.socialLink}
               target="_blank"
               rel="noopener noreferrer"

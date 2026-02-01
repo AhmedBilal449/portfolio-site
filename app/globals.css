@@ -3,9 +3,12 @@
   --background: #ffffff;
   --background-secondary: #f8f9fa;
   --foreground: #1a1a1a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4b5563;
   --card-bg: #f8f9fa;
   --border: #e5e7eb;
   --primary: #2563eb;
+  --primary-rgb: rgba(37, 99, 235, 0.2);
   --primary-hover: #1d4ed8;
   --secondary: #64748b;
 }
@@ -15,9 +18,12 @@
   --background: #0a0a0a;
   --background-secondary: #151515;
   --foreground: #e5e7eb;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
   --card-bg: #1a1a1a;
   --border: #2a2a2a;
   --primary: #3b82f6;
+  --primary-rgb: rgba(59, 130, 246, 0.2);
   --primary-hover: #60a5fa;
   --secondary: #94a3b8;
 }

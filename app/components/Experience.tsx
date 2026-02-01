@@ -11,36 +11,39 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'Tech Company',
-      period: '2023 - Present',
-      description: 'Leading frontend development initiatives and mentoring junior developers.',
+      title: 'Software Developer',
+      company: 'Indigo AI',
+      period: 'Sept 2025 - Present',
+      description: 'Built LangGraph multi-agent systems and modernized an Electron app UI with React/TypeScript.',
       highlights: [
-        'Architected and implemented responsive web applications using React and Next.js',
-        'Improved application performance by 40% through code optimization',
-        'Led a team of 5 developers in delivering high-quality features'
+        'Designed and implemented LangGraph-based multi-agent workflows to extract structured insights from heterogeneous enterprise data sources.',
+        'Built agents capable of reasoning over hot channels (live meetings, chats, PDFs) and cold channels (static knowledge bases such as Notion), enabling context-aware responses',
+        'Integrated and extended MCP, enabling dynamic context sharing between LangGraph agents and real-time sessions.',
+        'Collaborated on refactoring the Electron desktop application, modernizing legacy UI components using ShadCN to improve consistency and maintainability.'
       ]
     },
     {
-      title: 'Full Stack Developer',
-      company: 'StartUp Inc',
-      period: '2021 - 2023',
-      description: 'Developed full-stack applications and managed cloud infrastructure.',
+      title: 'Backend Developer',
+      company: 'LingoPal',
+      period: 'Aug 2024 - Dec 2024',
+      description: 'Built lip-synced ElevenLabs audio and improved translation quality in a Next.js/FastAPI stack.',
       highlights: [
-        'Built RESTful APIs using Node.js and Express',
-        'Implemented CI/CD pipelines reducing deployment time by 60%',
-        'Collaborated with cross-functional teams to deliver features'
+        'Built an audio generation feature using ElevenLabs, syncing voice output precisely with lip movements based on subtitle timing.',
+        'Led research comparing translation services, benchmarking accuracy with cosine similarity on Kaggle datasets; reduced errors by 14% through a hybrid approach using OpenAI for long text and Google Translate for short text, guided by user feedback.',
+        'Followed Agile methodology with weekly sprints and daily stand-ups; worked under a Scrum Master to ensure efficient delivery.',
+        'Performed extensive code reviews across a large existing codebase, improving readability, consistency, and maintainability.'
       ]
     },
     {
-      title: 'Junior Developer',
-      company: 'Digital Agency',
-      period: '2019 - 2021',
-      description: 'Created responsive websites and maintained client projects.',
+      title: 'AI Automation Engineer',
+      company: 'BizNav',
+      period: 'Sep 2023 - Dec 2023',
+      description: 'Automated workflows and built simple AI tools to boost productivity for non-technical teams.',
       highlights: [
-        'Developed client websites using modern web technologies',
-        'Maintained and updated existing codebases',
-        'Participated in code reviews and agile ceremonies'
+        'Automated departmental workflows with AI-enhanced Excel solutions, cutting manual effort and saving 14+ hours/week.',
+        'Designed and deployed simple locally hosted internal web tools using Python and Gradio that wrapped LLMs with structured, pre-defined prompts, enabling non-technical staff to consistently obtain high-quality AI outputs.',
+        'Organized and led AI workshops for staff, promoting adoption of AI tools to boost team productivity and efficiency.',
+        'Maintained and upgraded the company website, coordinating with external IT contractors to deliver timely updates.'
       ]
     }
   ];

@@ -16,11 +16,11 @@ export default function Skills() {
     },
     {
       title: 'Backend / Data',
-      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'SQL', 'Data Analysis']
+      skills: ['Node.js', 'Python', 'PostgreSQL', 'ML Pipelines', 'SQL', 'Data Analysis']
     },
     {
       title: 'Engineering',
-      skills: ['REST APIs', 'Git/GitHub', 'Vercel/Netlify', 'CI/CD', 'Testing', 'System Design']
+      skills: ['REST APIs', 'Git/GitHub', 'Vercel', 'CI/CD', 'Testing', 'System Design']
     }
   ];
 

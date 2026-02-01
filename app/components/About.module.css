@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2.5rem;
   border-radius: 20px;
@@ -29,6 +29,61 @@
   color: var(--foreground);
 }
 
+.flexContainer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.imageColumn {
+  flex: 0 0 auto;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='light'] .imageWrapper {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='light'] .imageWrapper:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.textColumn p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--secondary);
+  margin: 0;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -42,14 +97,39 @@
   margin: 0;
 }
 
+@media (max-width: 968px) {
+  .flexContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imageWrapper {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 @media (max-width: 768px) {
   .about {
     padding: 4rem 1.5rem;
   }
 
+  .container {
+    padding: 2rem;
+  }
+
   .sectionTitle {
     font-size: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .textColumn p {
+    font-size: 1.05rem;
   }
 
   .content p {
@@ -62,8 +142,25 @@
     padding: 3rem 1rem;
   }
 
+  .container {
+    padding: 1.5rem;
+  }
+
   .sectionTitle {
     font-size: 1.75rem;
+  }
+
+  .flexContainer {
+    gap: 1.5rem;
+  }
+
+  .imageWrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .textColumn p {
+    font-size: 1rem;
   }
 
   .content p {

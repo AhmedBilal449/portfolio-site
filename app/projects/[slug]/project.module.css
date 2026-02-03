@@ -116,6 +116,25 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.disclaimer {
+  padding: 1.25rem 1.75rem;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+[data-theme='light'] .disclaimer {
+  background: rgba(255, 193, 7, 0.15);
+  border-color: rgba(255, 193, 7, 0.4);
+}
+
+.disclaimer p {
+  margin: 0;
+}
+
 .mainImage {
   margin-bottom: 4rem;
   border-radius: 12px;

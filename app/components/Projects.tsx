@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -61,9 +62,13 @@ export default function Projects() {
                 className={styles.projectCard}
               >
                 <div className={styles.projectImage}>
-                  <div className={styles.imagePlaceholder}>
-                    {project.title}
-                  </div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    style={{ objectFit: 'cover' }}
+                  />
                 </div>
                 <div className={styles.projectContent}>
                   <h3 className={styles.projectTitle}>{project.title}</h3>

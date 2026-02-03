@@ -67,7 +67,7 @@ export default function Projects() {
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain', padding: '2rem' }}
                   />
                 </div>
                 <div className={styles.projectContent}>

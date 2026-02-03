@@ -19,7 +19,7 @@ export const projects: ProjectData[] = [
     slug: 'dental-cavity-detection',
     title: 'Dental Genie',
     shortDescription: 'Machine learning model for automated dental cavity detection using image analysis.',
-    image: '/dental-genie/logo.webp',
+    image: '/dental-genie/logo.png',
     techStack: ['Python', 'Ultralytics (YOLO)','Gradio', 'OpenCV','NumPy','Pandas'],
     problem: 'Dental cavity detection often relies on manual inspection, which can be time-consuming and subject to human error. Early detection is critical for preventing more serious dental issues, but traditional methods may miss subtle cavities.',
     solution: 'Built a machine learning-powered system that analyzes dental X-ray images to automatically identify and flag potential cavities. The model uses convolutional neural networks trained on thousands of annotated dental images to achieve high accuracy detection rates.',

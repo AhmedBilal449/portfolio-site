@@ -35,27 +35,6 @@ export const projects: ProjectData[] = [
   },
   {
     id: '2',
-    slug: 'kotlin-marketplace',
-    title: 'Kotlin Marketplace App',
-    shortDescription: 'Android e-commerce application with real-time inventory and secure payment integration.',
-    image: '/projects/marketplace.jpg',
-    techStack: ['Kotlin', 'Android', 'Firebase', 'REST API', 'Stripe', 'MVVM'],
-    problem: 'Small businesses needed a mobile-first marketplace solution that could handle real-time inventory updates, secure transactions, and provide a smooth user experience. Existing solutions were either too complex or lacked critical features for local sellers.',
-    solution: 'Developed a native Android marketplace application with a focus on performance and user experience. The app features real-time inventory synchronization, secure payment processing, and an intuitive interface for both buyers and sellers.',
-    keyFeatures: [
-      'Real-time inventory tracking with Firebase',
-      'Secure payment integration with Stripe',
-      'Search and filter functionality',
-      'Push notifications for orders and updates',
-      'Seller dashboard for managing listings',
-      'Rating and review system'
-    ],
-    screenshots: ['/projects/marketplace.jpg', '/projects/marketplace-2.jpg'],
-    liveUrl: 'https://play.google.com/store/apps/details?id=com.example.marketplace',
-    githubUrl: 'https://github.com/yourusername/kotlin-marketplace'
-  },
-  {
-    id: '3',
     slug: 'company-website',
     title: 'Company Website',
     shortDescription: 'Modern, responsive corporate website with content management and analytics.',

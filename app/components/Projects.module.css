@@ -88,6 +88,7 @@
   font-weight: 600;
   margin: 0 0 0.75rem 0;
   color: var(--foreground);
+  text-align: center;
 }
 
 .projectDescription {

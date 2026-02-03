@@ -46,20 +46,19 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
             >
-              I'm a software engineer who builds real systems that solve real problems. 
-              My focus is on creating scalable, maintainable solutions using modern web 
-              technologies and data-driven approaches. Whether it's developing full-stack 
-              applications, implementing machine learning models, or designing robust APIs, 
-              I prioritize clean code and user experience.
+              I'm Bilal (Not Ahmed), and this is my portfolio (obviously). I make things, and I break things.
+              I have a severe case of shiny object syndrome, and I'm trying to cure it by building things.
+              What I can do, I do, and what I can't do, I learn. This approach has allowed me to explore
+              a lot of different technologies and tools, and I'm always looking for new challenges.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
             >
-              I approach engineering with a problem-first mindset: understand the challenge, 
-              design the right solution, and build it to last. I'm constantly learning new 
-              technologies and applying them to create meaningful impact through software.
+              I’m currently a Software Developer at Indigo AI. When I joined, the tech stack was unfamiliar, but 
+              I dove in headfirst and quickly got up to speed with both the technology and the industry. I’m always
+              looking for opportunities to learn, experiment, and build meaningful things.
             </motion.p>
           </div>
         </div>

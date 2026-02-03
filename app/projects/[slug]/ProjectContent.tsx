@@ -54,36 +54,44 @@ export default function ProjectContent({ project }: ProjectContentProps) {
             ))}
           </div>
 
-          {/* Links */}
+          {/* Links or Disclaimer */}
           <motion.div 
             className={styles.links}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            {project.liveUrl && (
-              <motion.a 
-                href={project.liveUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.linkButton}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Live Demo →
-              </motion.a>
-            )}
-            {project.githubUrl && (
-              <motion.a 
-                href={project.githubUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.linkButton}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View on GitHub →
-              </motion.a>
+            {project.disclaimer ? (
+              <div className={styles.disclaimer}>
+                <p>{project.disclaimer}</p>
+              </div>
+            ) : (
+              <>
+                {project.liveUrl && (
+                  <motion.a 
+                    href={project.liveUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.linkButton}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View Live Demo →
+                  </motion.a>
+                )}
+                {project.githubUrl && (
+                  <motion.a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.linkButton}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View on GitHub →
+                  </motion.a>
+                )}
+              </>
             )}
           </motion.div>
         </motion.header>

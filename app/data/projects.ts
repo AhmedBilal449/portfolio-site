@@ -11,6 +11,7 @@ export interface ProjectData {
   screenshots: string[];
   liveUrl?: string;
   githubUrl?: string;
+  disclaimer?: string;
 }
 
 export const projects: ProjectData[] = [
@@ -51,8 +52,7 @@ export const projects: ProjectData[] = [
       'Contact form with email integration'
     ],
     screenshots: ['/projects/website.jpg', '/projects/website-2.jpg'],
-    liveUrl: 'https://example-company.vercel.app',
-    githubUrl: 'https://github.com/yourusername/company-website'
+    disclaimer: 'Due to a contract with the company, I cannot reveal the source code or provide a live demo of this project.'
   }
 ];
 

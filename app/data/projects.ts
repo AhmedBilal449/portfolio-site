@@ -39,7 +39,7 @@ export const projects: ProjectData[] = [
     title: 'Company Website',
     shortDescription: 'Modern, responsive corporate website with content management and analytics.',
     image: '/projects/website.jpg',
-    techStack: ['Next.js', 'React', 'TypeScript', 'Vercel', 'Tailwind CSS'],
+    techStack: ['Next.js', 'React', 'TypeScript', 'Vercel', 'Tailwind CSS', 'Supabase'],
     problem: 'A growing tech startup needed a professional web presence that could scale with their business. Their existing website was slow, difficult to update, and not optimized for search engines or mobile devices.',
     solution: 'Created a modern, static-first website using Next.js that delivers exceptional performance and SEO. The site is fully responsive, includes integrated analytics, and is designed for easy content updates without requiring a full CMS.',
     keyFeatures: [

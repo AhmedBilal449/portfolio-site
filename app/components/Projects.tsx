@@ -69,7 +69,7 @@ export default function Projects() {
                   <h3 className={styles.projectTitle}>{project.title}</h3>
                   <p className={styles.projectDescription}>{project.shortDescription}</p>
                   <div className={styles.techStack}>
-                    {project.techStack.slice(0, 4).map((tech) => (
+                    {project.techStack.map((tech) => (
                       <span key={tech} className={styles.techBadge}>
                         {tech}
                       </span>

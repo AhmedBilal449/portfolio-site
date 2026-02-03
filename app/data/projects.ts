@@ -31,7 +31,7 @@ export const projects: ProjectData[] = [
       'RESTful API for integration with dental software',
       'Batch processing support for multiple images'
     ],
-    screenshots: ['/projects/dental.jpg', '/projects/dental-2.jpg'],
+    screenshots: [],
     githubUrl: 'https://github.com/AhmedBilal449/dental-genie'
   },
   {

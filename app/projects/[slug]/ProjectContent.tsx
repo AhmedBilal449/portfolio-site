@@ -211,7 +211,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
                       alt={`Screenshot ${index + 1}`}
                       width={800}
                       height={600}
-                      className={styles.projectImage}
+                      className={styles.dentalScreenshot}
                     />
                   ) : (
                     <div className={styles.imagePlaceholder}>

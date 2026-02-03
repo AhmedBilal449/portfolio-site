@@ -162,6 +162,14 @@
   object-fit: cover;
 }
 
+.dentalScreenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 500px;
+}
+
 .section {
   margin-bottom: 4rem;
   animation: slideUp 0.7s ease-out 0.3s both;
@@ -220,6 +228,10 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--card-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .screenshot:hover {

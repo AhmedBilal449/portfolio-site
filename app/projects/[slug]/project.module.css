@@ -155,6 +155,13 @@
   font-weight: 600;
 }
 
+.projectImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .section {
   margin-bottom: 4rem;
   animation: slideUp 0.7s ease-out 0.3s both;

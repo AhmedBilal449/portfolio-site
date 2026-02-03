@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ProjectData } from '@/app/data/projects';
 import styles from './project.module.css';
@@ -103,9 +104,19 @@ export default function ProjectContent({ project }: ProjectContentProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className={styles.imagePlaceholder}>
-            {project.title}
-          </div>
+          {project.slug === 'tile-mania' ? (
+            <Image
+              src={require('@/app/assets/tile-mania/home-dark.png')}
+              alt="Tile Mania"
+              width={1200}
+              height={800}
+              className={styles.projectImage}
+            />
+          ) : (
+            <div className={styles.imagePlaceholder}>
+              {project.title}
+            </div>
+          )}
         </motion.div>
 
         {/* Problem Statement */}
@@ -178,9 +189,19 @@ export default function ProjectContent({ project }: ProjectContentProps) {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.03 }}
                 >
-                  <div className={styles.imagePlaceholder}>
-                    Screenshot {index + 1}
-                  </div>
+                  {project.slug === 'tile-mania' ? (
+                    <Image
+                      src={require(`@/app/assets/tile-mania/ui-0${index + 1}.png`)}
+                      alt={`Screenshot ${index + 1}`}
+                      width={800}
+                      height={600}
+                      className={styles.projectImage}
+                    />
+                  ) : (
+                    <div className={styles.imagePlaceholder}>
+                      Screenshot {index + 1}
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>

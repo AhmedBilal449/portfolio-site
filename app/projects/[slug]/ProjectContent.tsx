@@ -112,6 +112,14 @@ export default function ProjectContent({ project }: ProjectContentProps) {
               height={800}
               className={styles.projectImage}
             />
+          ) : project.slug === 'dental-cavity-detection' ? (
+            <Image
+              src={require('@/app/assets/dental-genie/main.png')}
+              alt="Dental Genie"
+              width={1200}
+              height={800}
+              className={styles.projectImage}
+            />
           ) : (
             <div className={styles.imagePlaceholder}>
               {project.title}
@@ -192,6 +200,14 @@ export default function ProjectContent({ project }: ProjectContentProps) {
                   {project.slug === 'tile-mania' ? (
                     <Image
                       src={require(`@/app/assets/tile-mania/ui-0${index + 1}.png`)}
+                      alt={`Screenshot ${index + 1}`}
+                      width={800}
+                      height={600}
+                      className={styles.projectImage}
+                    />
+                  ) : project.slug === 'dental-cavity-detection' ? (
+                    <Image
+                      src={require(`@/app/assets/dental-genie/sc-0${index + 1}.png`)}
                       alt={`Screenshot ${index + 1}`}
                       width={800}
                       height={600}
